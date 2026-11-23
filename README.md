@@ -1,52 +1,42 @@
-# Open Problems — Kumar Azad
+# Open Problems — Research Notebook
 
-A living, arXiv-inspired index of research questions and exploratory problems in theoretical physics, quantum mechanics, mathematical physics, ultrafast science and quantum biology.
+A lightweight research index by Kumar Azad, built from scratch as a **static GitHub Pages website**.
 
-**Website:** https://krazad0.github.io/Unsolved-Problem-/
+## Website
 
-## Purpose
+**https://krazad0.github.io/Unsolved-Problem-/**
 
-This repository is a structured research notebook—not a list of claimed discoveries. Each entry records:
-- the central research question;
-- a minimal mathematical model or starting point;
-- the next calculations, simulations or literature checks;
-- the current stage of development.
+## What is inside
 
-The catalogue will evolve as ideas are checked against the literature and developed into reproducible calculations.
+- `index.html` — complete standalone site (HTML, CSS, JavaScript). The eight research entries are written directly into the HTML so they remain visible without JavaScript.
+- `.nojekyll` — tells GitHub Pages to serve the static files directly.
+- `README.md` — documentation and setup instructions.
 
-## Current directions
+There is **no Node.js, React, Python backend, dependency installation, build command, or custom deployment workflow**. This avoids the earlier Actions failure.
 
-| ID | Research direction | Field | Current stage |
-|---|---|---|---|
-| OP-001 | Quantum dynamics in a simplified biological cell environment | Quantum biology | Model proposed |
-| OP-002 | Proton/deuteron tunnelling in a fluctuating asymmetric double well | Quantum biology | Model proposed |
-| OP-003 | Hydrogen atom in a toroidal attosecond confinement | Quantum mechanics | Numerical study |
-| OP-004 | Hydrogen atom with a periodically moving quantum boundary | Mathematical physics | Concept |
-| OP-005 | Ultrafast control of Dirac quasiparticles | Ultrafast physics | Model proposed |
-| OP-006 | Spectroscopic distinction between coherent transfer and relaxation | Ultrafast physics | Concept |
-| OP-007 | When the time-independent Schrödinger equation appears | Quantum mechanics | Concept |
-| OP-008 | A quantum-to-classical map for biomolecular transfer | Mathematical physics | Concept |
+## Publish with GitHub Pages (one-time repository setting)
 
-## Repository structure
+1. Open **Settings → Pages**: https://github.com/KrAzad0/Unsolved-Problem-/settings/pages
+2. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
+3. Choose **Branch: main** and **Folder: /(root)**, then select **Save**.
+4. Open the website URL above after GitHub reports the site is published.
 
-- `index.html` — searchable, responsive research index.
-- `README.md` — project scope and maintenance notes.
+**Important:** Committing code alone cannot enable Pages if repository Pages is disabled. Only someone with repository Settings access can make that one-time selection. All subsequent pushes to `main` are automatically published by GitHub Pages.
 
-## Add a problem
+## Research scope
 
-Give each new entry a stable ID (`OP-009`, `OP-010`, …) and include:
-1. **Title** — specific and scientifically cautious.
-2. **Research question** — one clear question.
-3. **Starting model** — equations, assumptions and regime.
-4. **Observables** — what can be calculated or measured.
-5. **Next steps** — literature review, derivation, numerical tests.
-6. **Status** — Concept / Model proposed / Numerical study / Manuscript in preparation / Published.
+The notebook contains eight early-stage entries about:
+- Quantum biology and isotope effects
+- Hydrogen in toroidal confinement and stationary states
+- Moving-boundary quantum dynamics and quantum-to-classical crossover
+- Ultrafast driving and spectroscopy
 
-Do not call a problem “unsolved” in the absolute sense without a literature review. Prefer “open question”, “research direction” or “problem under investigation”. Distinguish established results from hypotheses and proposed extensions.
+Every entry distinguishes a question, a starting model and a next verification step. The entries are exploratory and must not be represented as peer-reviewed discoveries.
 
-## Author
+## Updating the site
 
-Kumar Azad — M.Sc. Physics student, interested in theoretical and mathematical physics, quantum technology and computational research.
+Edit `index.html` directly. Each research item is an HTML `<article class="problem">` element with a `data-topic` attribute. The small inline search/filter script discovers these cards automatically.
 
-- Portfolio: https://krazad0.github.io/
-- GitHub: https://github.com/KrAzad0
+## License and credit
+
+Author: Kumar Azad. Repository: https://github.com/KrAzad0/Unsolved-Problem-

@@ -1,58 +1,236 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="An evolving research notebook of open questions in theoretical physics, quantum mechanics, quantum biology and mathematical physics.">
-<title>Open Problems — Kumar Azad</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<style>
-:root{--paper:#f7f6f2;--ink:#20211f;--muted:#777971;--line:#deded6;--green:#315c4b;--pale:#e9eee8;--white:#fff}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.65}
-a{color:inherit;text-decoration:none}.wrap{max-width:1120px;margin:auto;padding:0 34px}
-.top{height:66px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;font-size:12px;letter-spacing:.04em}
-.brand{font-weight:700;letter-spacing:.01em}.brand span{color:var(--green)}.nav{display:flex;gap:26px;color:var(--muted)}.nav a:hover{color:var(--green)}
-.hero{padding:86px 0 65px;display:grid;grid-template-columns:1.3fr .7fr;gap:60px;align-items:end;border-bottom:1px solid var(--line)}
-.eyebrow,.mono{font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:.1em;font-size:10px;color:var(--green)}
-h1{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(52px,7vw,84px);line-height:.98;letter-spacing:-.035em;margin:22px 0}
-h1 em{color:var(--green);font-weight:400}.intro{max-width:590px;color:#62655f;font-size:16px}
-.hero-note{border-left:1px solid var(--line);padding:8px 0 8px 25px;color:var(--muted);font-size:13px}.hero-note strong{display:block;color:var(--ink);font-family:'Instrument Serif',serif;font-size:25px;font-weight:400;margin-bottom:8px}
-.stats{display:flex;gap:35px;margin-top:30px}.stat b{display:block;font-family:'Instrument Serif',serif;font-size:27px;font-weight:400}.stat span{font:10px 'DM Mono',monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
-.section-head{display:flex;justify-content:space-between;align-items:end;padding:42px 0 20px}.section-head h2{font:32px 'Instrument Serif',serif;font-weight:400;margin:0}.section-head p{font-size:12px;color:var(--muted);margin:0}
-.controls{display:flex;gap:10px;flex-wrap:wrap;padding:0 0 22px}.search{flex:1;min-width:220px}.search input,.controls select{width:100%;background:transparent;border:1px solid var(--line);border-radius:3px;padding:11px 13px;font:13px 'DM Sans';color:var(--ink);outline:none}.search input:focus,.controls select:focus{border-color:var(--green)}
-.controls select{width:auto;min-width:170px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-.card{background:var(--paper);padding:27px 29px 25px;min-height:255px;display:flex;flex-direction:column;transition:background .2s}.card:hover{background:#efefe9}
-.card-top{display:flex;justify-content:space-between;gap:12px;align-items:center}.id{font:10px 'DM Mono';color:#999b93}.tag{font:9px 'DM Mono';text-transform:uppercase;letter-spacing:.08em;color:var(--green);background:var(--pale);padding:4px 8px;border-radius:2px}
-.card h3{font:27px/1.13 'Instrument Serif',serif;font-weight:400;margin:20px 0 10px;max-width:470px}.card .question{color:#62655f;font-size:13px;line-height:1.65;margin:0 0 20px}.more{margin:0 0 16px;color:#62655f;font-size:12px}.more summary{cursor:pointer;color:var(--green);font:10px 'DM Mono';text-transform:uppercase;letter-spacing:.07em}.more p{margin:10px 0 0;line-height:1.6}.card-bottom{margin-top:auto;padding-top:16px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:11px}.arrow{font-size:17px;color:var(--green)}
-.empty{padding:45px;text-align:center;color:var(--muted);grid-column:1/-1}
-.method{margin:76px 0 70px;padding:30px 34px;background:#eeeee8;display:grid;grid-template-columns:1fr 2fr;gap:35px}.method h2{font:30px 'Instrument Serif';font-weight:400;margin:0}.method p{margin:0;color:#62655f;font-size:13px}
-.footer{border-top:1px solid var(--line);padding:23px 0 35px;display:flex;justify-content:space-between;color:var(--muted);font-size:11px}.footer a{color:var(--green)}
-@media(max-width:700px){.wrap{padding:0 20px}.hero{padding:60px 0 42px;grid-template-columns:1fr;gap:24px}.hero-note{max-width:440px}.grid{grid-template-columns:1fr}.nav{gap:13px}.nav a:nth-child(2){display:none}.method{grid-template-columns:1fr;gap:12px;margin:50px 0}.section-head{align-items:start;gap:8px;flex-direction:column}.footer{gap:12px;flex-direction:column}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102f2e">
+  <meta name="description" content="An independent research notebook exploring open questions in quantum mechanics, mathematical physics, ultrafast science, and quantum biology.">
+  <link rel="canonical" href="https://krazad0.github.io/Unsolved-Problem-/">
+  <title>Open Problems | Research Notebook</title>
+  <style>
+    :root{--dark:#102f2e;--dark2:#214a45;--paper:#faf9f5;--white:#ffffff;--ink:#1a2b2a;--sub:#566763;--line:#dbe2db;--mint:#d7e8dc;--accent:#286858}
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;color:var(--ink);background:var(--paper);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
+    a{color:inherit}button,input{font:inherit}
+    .skip-link{position:absolute;top:-70px;left:12px;background:#fff;color:#102f2e;padding:10px 14px;z-index:10}.skip-link:focus{top:12px}
+    .container{width:min(1120px,calc(100% - 48px));margin-inline:auto}
+    .site-header{background:var(--dark);color:#fff;border-bottom:1px solid #44625a}
+    .header-inner{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .logo{text-decoration:none;font-size:13px;font-weight:750;letter-spacing:.13em;text-transform:uppercase;white-space:nowrap}
+    .logo span{color:#9fcbb1;font-weight:400}
+    nav{display:flex;gap:24px;align-items:center;font-size:13px}nav a{text-decoration:none;color:#d9e6dd}nav a:hover,nav a:focus-visible{color:white;text-decoration:underline}
+    .hero{background:radial-gradient(circle at 90% 10%,#2d5950 0,transparent 42%),var(--dark);color:#fff}
+    .hero-inner{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(220px,.7fr);gap:9%;padding-block:96px 104px;align-items:center}
+    .eyebrow,.micro{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+    .eyebrow{color:#9fcbb1}
+    h1,h2,h3,.hero-callout strong{font-family:Georgia,"Times New Roman",serif;font-weight:400}
+    h1{font-size:clamp(48px,6.6vw,82px);line-height:1.02;letter-spacing:-.042em;margin:23px 0 26px;max-width:740px}
+    h1 em{font-style:italic;color:#b4dec2}
+    .lead{color:#d5e4db;font-size:17px;max-width:620px;margin:0}
+    .hero-callout{border-left:1px solid #739388;padding-left:24px;color:#d3e2d7;font-size:14px}
+    .hero-callout strong{display:block;color:white;font-size:42px;line-height:1.1;margin-bottom:12px}
+    .hero-callout p{margin:0}
+    .hero-callout .micro{display:block;color:#a3c9b1;margin:18px 0 7px}
+    .section{padding-block:74px}
+    .section-title{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:27px}
+    .section-title h2{font-size:clamp(35px,4vw,48px);line-height:1.1;margin:7px 0 0}
+    .section-title p{max-width:430px;margin:0;color:var(--sub);font-size:14px}
+    .micro{color:var(--accent)}
+    .toolbar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:17px;align-items:center;margin:32px 0 20px}
+    .filters{display:flex;flex-wrap:wrap;gap:7px}
+    .filter{background:transparent;border:1px solid #cddbd1;color:#2c4e45;border-radius:99px;padding:8px 13px;font-size:12px;cursor:pointer}
+    .filter[aria-pressed="true"]{background:var(--dark);border-color:var(--dark);color:#fff}
+    .filter:focus-visible,.search:focus-visible,summary:focus-visible{outline:3px solid #6cbaa0;outline-offset:3px}
+    .search{background:white;border:1px solid #cddbd1;border-radius:8px;padding:12px 15px;width:min(100%,275px);font-size:13px}
+    #result-count{font-size:12px;color:var(--sub);margin:0 0 16px}
+    .problem-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .problem{background:#fff;border:1px solid var(--line);border-radius:10px;padding:29px;min-height:320px;display:flex;flex-direction:column;box-shadow:0 3px 16px rgba(16,47,46,.025)}
+    .problem[hidden],#empty[hidden]{display:none}
+    .problem-top{display:flex;justify-content:space-between;gap:10px;align-items:center}
+    .number{font-size:11px;letter-spacing:.12em;color:#6d827a;font-weight:700}
+    .field{background:#e9f0e9;color:#295a4c;border-radius:4px;padding:4px 8px;font-size:10px;font-weight:700;letter-spacing:.03em;white-space:nowrap}
+    .problem h3{font-size:clamp(24px,2.5vw,31px);line-height:1.16;margin:27px 0 13px}
+    .question{color:var(--sub);font-size:14px;margin:0 0 22px}
+    details{margin-top:auto;border-top:1px solid var(--line);padding-top:15px}
+    summary{display:flex;justify-content:space-between;align-items:center;cursor:pointer;color:var(--accent);font-weight:700;font-size:12px;list-style:none}
+    summary::-webkit-details-marker{display:none}
+    summary span{font-size:17px}
+    .detail-body{padding:8px 0 4px;color:var(--sub);font-size:13px}
+    .detail-body p{margin:13px 0}.detail-body strong{color:var(--ink)}
+    .problem-footer{border-top:1px solid var(--line);margin-top:18px;padding-top:14px;color:#6a7e77;font-size:11px;display:flex;align-items:center;gap:8px}
+    .status-dot{width:7px;height:7px;border-radius:50%;background:#6caa8c;flex-shrink:0}
+    #empty{background:white;text-align:center;border:1px dashed var(--line);padding:36px;border-radius:8px}
+    .principles{background:#edf2ec;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .principles-inner{display:grid;grid-template-columns:.85fr 1.15fr;gap:9%;padding-block:62px}
+    .principles h2{font-size:clamp(32px,3.8vw,46px);line-height:1.14;margin:8px 0 0}
+    .principles-copy{color:#48615a;font-size:15px}.principles-copy p{margin:0 0 16px}
+    .principles-copy a{color:#1b5b4b;text-decoration-thickness:1px;text-underline-offset:3px;font-weight:700}
+    .site-footer{background:var(--dark);color:#c1d4c7}
+    .footer-inner{min-height:120px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:12px}
+    .footer-inner a{color:#c1e0ca}
+    @media(max-width:800px){.hero-inner{gap:38px;grid-template-columns:1fr;padding-block:69px}.hero-callout{max-width:520px}.principles-inner{grid-template-columns:1fr;gap:20px}.section-title{align-items:start;flex-direction:column;gap:12px}}
+    @media(max-width:600px){.container{width:min(100% - 32px,1120px)}.header-inner{min-height:70px}.logo{font-size:10px}nav{gap:12px;font-size:11px}.hero-inner{padding-block:58px 62px}h1{font-size:49px}.lead{font-size:15px}.section{padding-block:50px}.toolbar{align-items:stretch}.search{width:100%}.problem-grid{grid-template-columns:1fr}.problem{padding:23px;min-height:0}.footer-inner{flex-direction:column;align-items:start;padding-block:26px;gap:5px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
 </head>
 <body>
-<header class="top wrap"><a class="brand" href="#">KUMAR AZAD<span> / </span>OPEN PROBLEMS</a><nav class="nav"><a href="#problems">Problem index</a><a href="#method">About</a><a href="https://github.com/KrAzad0/Unsolved-Problem-">GitHub ↗</a></nav></header>
-<main class="wrap">
-<section class="hero"><div><div class="eyebrow">A personal research index · 2026—</div><h1>Questions worth<br><em>working on.</em></h1><p class="intro">An evolving catalogue of open questions, model-building directions and exploratory problems across quantum mechanics, mathematical physics, ultrafast science and quantum biology. Each entry is a starting point for careful investigation—not a claim of a new discovery.</p><div class="stats"><div class="stat"><b id="count">08</b><span>Research directions</span></div><div class="stat"><b>04</b><span>Core themes</span></div><div class="stat"><b>01</b><span>Living notebook</span></div></div></div><aside class="hero-note"><strong>Research is a process.</strong>This index records questions as they evolve: from physical intuition, to a mathematical model, to computation, literature review and—where justified—a research manuscript.</aside></section>
-<section id="problems"><div class="section-head"><h2>Problem index</h2><p>Browse the current research directions ↓</p></div>
-<div class="controls"><label class="search"><input id="search" type="search" placeholder="Search a question, concept or keyword…" aria-label="Search problems"></label><select id="category" aria-label="Filter by field"><option value="all">All fields</option><option>Quantum biology</option><option>Quantum mechanics</option><option>Ultrafast physics</option><option>Mathematical physics</option></select><select id="status" aria-label="Filter by stage"><option value="all">All stages</option><option>Concept</option><option>Model proposed</option><option>Numerical study</option></select></div>
-<div class="grid" id="problem-grid"></div></section>
-<section class="method" id="method"><h2>How to read this index</h2><p><b>Open question</b> identifies the central problem. <b>Starting model</b> records a tractable mathematical formulation. <b>Next step</b> describes the work needed to assess feasibility and novelty. The labels describe the current state of my notes, not peer-reviewed validation. Before presenting any direction as novel, the relevant literature must be reviewed and prior work acknowledged.</p></section>
-</main>
-<footer class="footer wrap"><span>© 2026 Kumar Azad · Independent learning & research notes</span><span><a href="https://github.com/KrAzad0">GitHub</a> · <a href="https://krazad0.github.io/">Portfolio</a></span></footer>
-<script>
-const problems=[
-{id:"OP-001",title:"Quantum dynamics in a simplified biological cell environment",field:"Quantum biology",stage:"Model proposed",summary:"Can a minimal biomolecular quantum model retain measurable coherence or tunnelling signatures when coupled to a noisy, warm cellular environment?",model:"Begin with a proton-transfer double well and an open-system description; treat the cell as a classical fluctuating environment, not as a globally quantum object.",next:"Compare isolated and noisy dynamics; calculate transfer probability, coherence, purity and isotope dependence. Build a reproducible dataset only after defining the physical model.",keywords:"cell biology proton transfer open quantum system decoherence dataset amoeba"},
-{id:"OP-002",title:"Proton and deuteron tunnelling in a fluctuating asymmetric double well",field:"Quantum biology",stage:"Model proposed",summary:"How do barrier fluctuations, temperature and isotope mass jointly control proton-transfer probability in a minimal donor–acceptor system?",model:"V(x)=a(x²−b²)²+ΔVx, with environmental fluctuations and explicit H/D masses.",next:"Map E₀, E₁, level splitting, left/right populations and Pₜᵤₙₙₑₗ against barrier parameters; test whether isotope effects survive environmental decoherence.",keywords:"hydrogen deuterium isotope effect tunneling double well biomolecular transfer"},
-{id:"OP-003",title:"Hydrogen atom in a toroidal attosecond confinement",field:"Quantum mechanics",stage:"Numerical study",summary:"How does a Coulomb-bound electron evolve when confined to a toroidal hard-wall region and driven by an ultrashort laser pulse?",model:"A Coulomb Hamiltonian inside Ω={(√(x²+y²)−R)²+z²<a²}, with Dirichlet boundary conditions and a time-dependent field.",next:"Establish convergence and benchmark stationary eigenstates before interpreting pulse-driven density, current, spectra or high-harmonic response.",keywords:"torus hydrogen atom attosecond pulse TDSE hard wall quantum cavity"},
-{id:"OP-004",title:"Emergent space–time structure in a hydrogen atom with a moving boundary",field:"Mathematical physics",stage:"Concept",summary:"Can periodic boundary motion produce a useful composite radial–temporal structure beyond the familiar stationary quantum numbers?",model:"A breathing Coulomb cavity R(t)=R₀[1+ε cos(Ωt)] governed by the time-dependent Schrödinger equation.",next:"Derive the allowed structure from symmetry, regularity and periodicity; distinguish any new label from standard Floquet indices and recover the static limit as ε→0.",keywords:"moving boundary hydrogen floquet time dependent schrodinger equation"},
-{id:"OP-005",title:"Ultrafast control of Dirac quasiparticles in quantum materials",field:"Ultrafast physics",stage:"Model proposed",summary:"How does an ultrashort pulse modify Dirac dispersion, transient gaps and the time-resolved photoemission signal?",model:"Start from H₀=ℏvF(kₓσₓ+kᵧσᵧ)+Δσz and introduce a pulse-dependent drive H(k,t).",next:"Solve the driven dynamics and calculate a simulated trARPES intensity I(k,ω,t); compare pulse parameters and identify experimentally distinguishable signatures.",keywords:"Dirac quasiparticle trARPES attosecond ultrafast spectroscopy pulse"},
-{id:"OP-006",title:"Can ultrafast spectroscopy distinguish coherent transfer from ordinary relaxation?",field:"Ultrafast physics",stage:"Concept",summary:"Which time- and frequency-resolved observables could separate coherent electron or proton transfer from incoherent relaxation in a biomolecular system?",model:"A minimal few-state time-dependent Hamiltonian coupled to a dissipative environment, with synthetic spectroscopic observables.",next:"Identify discriminating observables, noise limits and competing classical models before proposing a biological interpretation.",keywords:"quantum coherence spectroscopy electron proton transfer photosynthesis relaxation"},
-{id:"OP-007",title:"When does the time-independent Schrödinger equation appear?",field:"Quantum mechanics",stage:"Concept",summary:"What precisely makes a quantum state stationary, and when does a time-independent eigenvalue problem cease to describe the dynamics?",model:"Compare a stationary eigenstate and a superposition in a static potential, then introduce an explicitly time-dependent perturbation.",next:"Derive the separation conditions carefully and construct examples showing the difference between stationary states and general solutions of the time-dependent equation.",keywords:"TISE TDSE stationary state superposition infinite well time dependent potential"},
-{id:"OP-008",title:"A quantum-to-classical map for biomolecular transfer",field:"Mathematical physics",stage:"Concept",summary:"Can a compact dimensionless phase map organise the regimes of coherent tunnelling, incoherent transfer and classical hopping?",model:"Use a minimal open-system transfer model and compare decoherence time τd with transfer time τtransfer through Q=τd/τtransfer.",next:"Define operational regime boundaries from computed observables, test robustness against model assumptions and avoid treating a smooth crossover as a universal phase transition.",keywords:"quantum classical crossover coherence time decoherence phase map"}
-];
-const grid=document.getElementById('problem-grid'),search=document.getElementById('search'),category=document.getElementById('category'),status=document.getElementById('status');
-function render(){const q=search.value.toLowerCase();const list=problems.filter(p=>(category.value==='all'||p.field===category.value)&&(status.value==='all'||p.stage===status.value)&&[p.title,p.summary,p.field,p.keywords].join(' ').toLowerCase().includes(q));document.getElementById('count').textContent=String(problems.length).padStart(2,'0');grid.innerHTML=list.length?list.map(p=>'<article class="card"><div class="card-top"><span class="id">'+p.id+'</span><span class="tag">'+p.field+'</span></div><h3>'+p.title+'</h3><p class="question">'+p.summary+'</p><details class="more"><summary>Open research note</summary><p><b>Starting model:</b> '+p.model+'</p><p><b>Next step:</b> '+p.next+'</p></details><div class="card-bottom"><span>'+p.stage+' · <span title="'+p.next.replace(/"/g,'&quot;')+'">Next steps outlined</span></span><a class="arrow" href="https://github.com/KrAzad0/Unsolved-Problem-/issues" aria-label="Discuss '+p.id+'">↗</a></div></article>').join(''):'<div class="empty">No matching research directions. Try another search or filter.</div>'}
-[search,category,status].forEach(el=>el.addEventListener('input',render));render();
-</script>
-</body></html>
+  <a class="skip-link" href="#research">Skip to research index</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#top">Kumar Azad <span>/ Open Problems</span></a>
+      <nav aria-label="Main navigation"><a href="#research">Research</a><a href="#approach">Approach</a><a href="https://github.com/KrAzad0/Unsolved-Problem-" rel="noopener noreferrer">GitHub ↗</a></nav>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero-inner">
+        <div><div class="eyebrow">Independent research notebook · 2026</div>
+          <h1 id="hero-heading">Questions worth <em>exploring.</em></h1>
+          <p class="lead">An evolving index of ideas in quantum mechanics, mathematical physics, ultrafast science and quantum biology. From a physical question to a testable model and reproducible calculation.</p>
+        </div>
+        <aside class="hero-callout"><strong>08</strong><p>research directions spanning four connected fields.</p><span class="micro">The guiding principle</span><p>Curiosity begins the investigation. Mathematics, evidence and careful validation move it forward.</p></aside>
+      </div>
+    </section>
+    <section id="research" class="section container" aria-labelledby="research-heading">
+      <div class="section-title">
+        <div><span class="micro">The notebook</span><h2 id="research-heading">Research index</h2></div>
+        <p>Explore working questions, their first mathematical models and the calculations needed to assess them.</p>
+      </div>
+      <div class="toolbar">
+        <div class="filters" role="group" aria-label="Filter by research field">
+          <button class="filter" type="button" data-filter="all" aria-pressed="true">All fields</button>
+          <button class="filter" type="button" data-filter="quantum" aria-pressed="false">Quantum mechanics</button>
+          <button class="filter" type="button" data-filter="math" aria-pressed="false">Mathematical physics</button>
+          <button class="filter" type="button" data-filter="ultrafast" aria-pressed="false">Ultrafast science</button>
+          <button class="filter" type="button" data-filter="biology" aria-pressed="false">Quantum biology</button>
+        </div>
+        <input class="search" id="search" type="search" placeholder="Search research topics…" aria-label="Search research topics" autocomplete="off">
+      </div>
+      <p id="result-count" role="status" aria-live="polite">Showing all 8 research directions</p>
+      <div class="problem-grid" id="problem-grid">
+<article class="problem" data-topic="biology" id="op-001">
+  <div class="problem-top"><span class="number">OP-001</span><span class="field">Quantum biology</span></div>
+  <h3>Quantum dynamics in a simplified biological environment</h3>
+  <p class="question">When can a microscopic transfer process retain a measurable quantum signature in a fluctuating, warm molecular environment?</p>
+  <details><summary>Research outline <span aria-hidden="true">↗</span></summary>
+    <div class="detail-body"><p><strong>Starting model</strong><br>Begin with a two-state proton-transfer model coupled to a phenomenological noisy environment. Treat the surroundings classically unless the model justifies a quantum bath.</p>
+    <p><strong>Next investigation</strong><br>Compare coherent and dissipative dynamics; assess tunnelling, purity, and parameter sensitivity.</p></div>
+  </details>
+  <div class="problem-footer"><span class="status-dot" aria-hidden="true"></span>Model proposed</div>
+</article>
+<article class="problem" data-topic="biology" id="op-002">
+  <div class="problem-top"><span class="number">OP-002</span><span class="field">Quantum biology</span></div>
+  <h3>Isotope effects in a fluctuating double well</h3>
+  <p class="question">How do molecular barrier fluctuations and isotopic mass influence transfer dynamics and observable isotope effects?</p>
+  <details><summary>Research outline <span aria-hidden="true">↗</span></summary>
+    <div class="detail-body"><p><strong>Starting model</strong><br>Use an asymmetric double-well potential V(x) = a(x² − b²)² + ΔV x with proton and deuteron masses.</p>
+    <p><strong>Next investigation</strong><br>Calculate eigenstate splitting, populations, tunnelling times, and noise-dependent isotope effects.</p></div>
+  </details>
+  <div class="problem-footer"><span class="status-dot" aria-hidden="true"></span>Model proposed</div>
+</article>
+<article class="problem" data-topic="quantum" id="op-003">
+  <div class="problem-top"><span class="number">OP-003</span><span class="field">Quantum mechanics</span></div>
+  <h3>A hydrogen atom inside a toroidal cavity</h3>
+  <p class="question">How do toroidal confinement and an ultrashort applied field modify bound-state dynamics of a Coulomb system?</p>
+  <details><summary>Research outline <span aria-hidden="true">↗</span></summary>
+    <div class="detail-body"><p><strong>Starting model</strong><br>Solve the Coulomb Schrödinger equation on a solid toroidal domain with hard-wall boundary conditions; add a time-dependent driving term.</p>
+    <p><strong>Next investigation</strong><br>Benchmark stationary states, verify convergence, and then study pulse-driven probability densities and observables.</p></div>
+  </details>
+  <div class="problem-footer"><span class="status-dot" aria-hidden="true"></span>Numerical study</div>
+</article>
+<article class="problem" data-topic="math" id="op-004">
+  <div class="problem-top"><span class="number">OP-004</span><span class="field">Mathematical physics</span></div>
+  <h3>Quantum dynamics with a moving boundary</h3>
+  <p class="question">What changes when the confining boundary of a hydrogen-like system moves periodically in time?</p>
+  <details><summary>Research outline <span aria-hidden="true">↗</span></summary>
+    <div class="detail-body"><p><strong>Starting model</strong><br>Consider a time-dependent cavity scale R(t) = R₀[1 + ε cos(Ωt)] and map the moving domain into fixed coordinates.</p>
+    <p><strong>Next investigation</strong><br>Derive transformed operators and boundary conditions; compare with known Floquet descriptions and the static limit.</p></div>
+  </details>
+  <div class="problem-footer"><span class="status-dot" aria-hidden="true"></span>Concept</div>
+</article>
+<article class="problem" data-topic="ultrafast" id="op-005">
+  <div class="problem-top"><span class="number">OP-005</span><span class="field">Ultrafast physics</span></div>
+  <h3>Ultrafast control of Dirac quasiparticles</h3>
+  <p class="question">How do brief external pulses affect transient quasiparticle dispersion and simulated spectroscopic signals?</p>
+  <details><summary>Research outline <span aria-hidden="true">↗</span></summary>
+    <div class="detail-body"><p><strong>Starting model</strong><br>Start from a low-energy two-band Dirac Hamiltonian and introduce a time-dependent field coupling.</p>
+    <p><strong>Next investigation</strong><br>Compute driven dynamics and model time-resolved photoemission observables against the field parameters.</p></div>
+  </details>
+  <div class="problem-footer"><span class="status-dot" aria-hidden="true"></span>Model proposed</div>
+</article>
+<article class="problem" data-topic="ultrafast" id="op-006">
+  <div class="problem-top"><span class="number">OP-006</span><span class="field">Ultrafast physics</span></div>
+  <h3>Separating coherent transfer from relaxation</h3>
+  <p class="question">Can time-resolved measurements distinguish coherent dynamics from incoherent population transfer?</p>
+  <details><summary>Research outline <span aria-hidden="true">↗</span></summary>
+    <div class="detail-body"><p><strong>Starting model</strong><br>Use a few-state quantum model with tunable dissipation and formulate synthetic time- and frequency-resolved signals.</p>
+    <p><strong>Next investigation</strong><br>Quantify observables, experimental noise requirements, and competing noncoherent explanations.</p></div>
+  </details>
+  <div class="problem-footer"><span class="status-dot" aria-hidden="true"></span>Concept</div>
+</article>
+<article class="problem" data-topic="quantum" id="op-007">
+  <div class="problem-top"><span class="number">OP-007</span><span class="field">Quantum mechanics</span></div>
+  <h3>When do stationary quantum states emerge?</h3>
+  <p class="question">Under which conditions does a time-independent eigenvalue problem fully characterize a quantum state?</p>
+  <details><summary>Research outline <span aria-hidden="true">↗</span></summary>
+    <div class="detail-body"><p><strong>Starting model</strong><br>Compare eigenstates and superpositions under a static Hamiltonian, then introduce explicit time dependence.</p>
+    <p><strong>Next investigation</strong><br>Derive separation criteria and demonstrate where the stationary-state interpretation breaks down.</p></div>
+  </details>
+  <div class="problem-footer"><span class="status-dot" aria-hidden="true"></span>Concept</div>
+</article>
+<article class="problem" data-topic="math" id="op-008">
+  <div class="problem-top"><span class="number">OP-008</span><span class="field">Mathematical physics</span></div>
+  <h3>Mapping the quantum-to-classical crossover</h3>
+  <p class="question">Which dimensionless quantities characterize the crossover between coherent tunnelling and classical-like transfer?</p>
+  <details><summary>Research outline <span aria-hidden="true">↗</span></summary>
+    <div class="detail-body"><p><strong>Starting model</strong><br>Analyze a minimal dissipative transfer system through the ratio of coherence and transfer timescales.</p>
+    <p><strong>Next investigation</strong><br>Construct a parameter map from computed observables and test whether proposed boundaries are model dependent.</p></div>
+  </details>
+  <div class="problem-footer"><span class="status-dot" aria-hidden="true"></span>Concept</div>
+</article>
+      </div>
+      <p id="empty" hidden>No research directions match your search. Try another term or select a different field.</p>
+    </section>
+    <section id="approach" class="principles" aria-labelledby="approach-heading">
+      <div class="container principles-inner">
+        <div><span class="micro">Research practice</span><h2 id="approach-heading">Questions are not claims.</h2></div>
+        <div class="principles-copy"><p>These entries are exploratory directions, not declarations of new discoveries or established open problems. Every project should begin with a literature review, explicit assumptions and a mathematically consistent model.</p><p>Next come limiting-case checks, numerical convergence, observable predictions, reproducibility and comparison with published work. The labels above track progress in the notebook; they do not imply peer review.</p><p><a href="https://github.com/KrAzad0/Unsolved-Problem-" rel="noopener noreferrer">View the open repository ↗</a></p></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>© 2026 Kumar Azad · Open Problems</span><span>An independent research notebook · <a href="https://github.com/KrAzad0" rel="noopener noreferrer">GitHub profile</a></span></div></footer>
+  <script>
+    (function () {
+      "use strict";
+      var field = "all";
+      var cards = Array.prototype.slice.call(document.querySelectorAll(".problem"));
+      var buttons = Array.prototype.slice.call(document.querySelectorAll("[data-filter]"));
+      var search = document.getElementById("search");
+      var count = document.getElementById("result-count");
+      var empty = document.getElementById("empty");
+      function update() {
+        var term = search.value.trim().toLocaleLowerCase();
+        var visible = 0;
+        cards.forEach(function (card) {
+          var match = (field === "all" || card.getAttribute("data-topic") === field) &&
+            (term === "" || card.textContent.toLocaleLowerCase().indexOf(term) !== -1);
+          card.hidden = !match;
+          if (match) visible += 1;
+        });
+        count.textContent = "Showing " + visible + " of " + cards.length + " research directions";
+        empty.hidden = visible !== 0;
+      }
+      buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          field = button.getAttribute("data-filter");
+          buttons.forEach(function (item) { item.setAttribute("aria-pressed", String(item === button)); });
+          update();
+        });
+      });
+      search.addEventListener("input", update);
+      update();
+    })();
+  </script>
+</body>
+</html>
