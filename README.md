@@ -1,6 +1,6 @@
-# Open Problems — Research Notebook
+# Unsolved Problems — Research in Progress
 
-A lightweight research index by Kumar Azad, built from scratch as a **static GitHub Pages website**.
+This is **Kumar Azad's active research notebook**: a public record of difficult problems and research questions I am working on across theoretical and mathematical physics, quantum mechanics, ultrafast science and quantum biology. The site presents my working questions, possible mathematical models and planned investigations rather than claiming completed solutions.
 
 ## Website
 
@@ -25,17 +25,17 @@ There is **no Node.js, React, Python backend, dependency installation, build com
 
 ## Research scope
 
-The notebook contains eight early-stage entries about:
+I am currently investigating eight research directions at different stages of formulation, modelling or numerical exploration:
 - Quantum biology and isotope effects
 - Hydrogen in toroidal confinement and stationary states
 - Moving-boundary quantum dynamics and quantum-to-classical crossover
 - Ultrafast driving and spectroscopy
 
-Every entry distinguishes a question, a starting model and a next verification step. The entries are exploratory and must not be represented as peer-reviewed discoveries.
+Each entry records the scientific question I am investigating, a model under consideration, and the next step in my work. These topics are ongoing investigations, **not claims of solved problems, original discoveries or peer-reviewed results**. Some research questions may already have partial answers or prior solutions in the literature; verifying that history is part of the work.
 
 ## Updating the site
 
-Edit `index.html` directly. Each research item is an HTML `<article class="problem">` element with a `data-topic` attribute. The small inline search/filter script discovers these cards automatically.
+Edit `index.html` directly. Each research item is an HTML `<article class="problem">` with a `data-topic` attribute. Update its question, current model, next steps and investigation stage as the work develops. The search/filter script discovers these cards automatically.
 
 ## License and credit
 
